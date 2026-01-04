@@ -3,10 +3,7 @@
 <br/>
 
 [![Live App](https://img.shields.io/badge/Live-App-brightgreen)](https://resume-analyser-kp0f.onrender.com/)
-![Spring Boot](https://img.shields.io/badge/SpringBoot-Backend-success)
-![React](https://img.shields.io/badge/React-Frontend-blue)
-![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
-![AI](https://img.shields.io/badge/AI-Google%20Gemini-purple)
+
 
 ---
 
@@ -72,3 +69,92 @@ The project integrates **Google Gemini AI** for intelligent resume analysis and 
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/Mohamed-Imran-12/Resume-Analyser.git
+```
+
+### 2️⃣ Open Project in IDE
+- Open in IntelliJ IDEA or Eclipse
+- Open pom.xml and allow Maven to download dependencies
+
+### 3️⃣ Configure Credentials (application.properties)
+🗄️ Database (MySQL ONLY)
+```bash
+spring.datasource.url=your_DB_URL
+spring.datasource.username=your_DB_USERNAME
+spring.datasource.password=your_DB_PASSWORD
+```
+
+🔐 Google Cloud Platform (Google Sign-In)
+```bash
+spring.security.oauth2.client.registration.google.client-id=your_GCP_ID
+spring.security.oauth2.client.registration.google.client-secret=your_GCP_SECRET
+```
+
+🤖 Google Gemini AI (Resume Analysis)
+```bash
+genKey=your_GEMINI_API_KEY
+```
+
+📧 Mail Service (Brevo ONLY)
+```bash
+apiKey=your_BREVO_MAIL_API
+```
+
+### 4️⃣ Run Backend
+Run:
+```bash
+ResumeAnalyserApplication.java
+```
+
+### 5️⃣ Open in Browser
+```bash
+http://localhost:8080/
+```
+
+<br>
+
+## ⚠️ Important Notes (Must Read)
+- Only Google Gemini AI is configured
+  ➜ To use another AI provider, update AI-related logic in ``` appservice.java ```
+
+- Email functionality works only with Brevo API
+  ➜ To change mail provider, update ``` mailservice.java ```
+
+- AI models evolve rapidly
+  ➜ If the configured Gemini model is deprecated, update it in ``` appservice.java ```
+
+<br>
+
+## 🎨 Modifying the Frontend UI
+🚫 Do NOT edit files inside backend static directory directly
+🔧 Development Mode (Frontend Only)
+```bash
+cd "frontend src"
+npm install
+npm run dev
+```
+This runs the React development server for UI changes.
+
+📦 Build Frontend for Backend Deployment
+```bash
+cd "frontend src"
+npm run build
+```
+
+📂 Backend Static Structure
+```text
+static/
+├── assets/
+│   ├── *.css
+│   ├── *.js
+├── index.html
+```
+
+### Deployment Steps
+
+1. Delete old index.html and files inside assets
+2. Copy new build files from dist
+3. Paste them into backend static directory
+
+<br>
+
+### Author : ``` Vievk Sharma ```
