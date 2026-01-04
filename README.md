@@ -1,11 +1,7 @@
 # 🚀 Resume Analyzer
 
-<br/>
-
 [![Live App](https://img.shields.io/badge/Live-App-brightgreen)](https://resume-analyser-kp0f.onrender.com/)
 
-
----
 
 ## 📌 Description
 
