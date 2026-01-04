@@ -106,7 +106,7 @@ ResumeAnalyserApplication.java
 http://localhost:8080/
 ```
 
-<br>
+<hr>
 
 ## ⚠️ Important Notes (Must Read)
 - Only Google Gemini AI is configured
@@ -118,10 +118,10 @@ http://localhost:8080/
 - AI models evolve rapidly
   ➜ If the configured Gemini model is deprecated, update it in ``` appservice.java ```
 
-<br>
+<hr>
 
 ## 🎨 Modifying the Frontend UI
-🚫 Do NOT edit files inside backend static directory directly
+🚫 Do NOT edit files inside backend static directory directly <br>
 🔧 Development Mode (Frontend Only)
 ```bash
 cd "frontend src"
@@ -145,12 +145,12 @@ static/
 ├── index.html
 ```
 
-### Deployment Steps
+✔️ Deployment Steps
 
 1. Delete old index.html and files inside assets
 2. Copy new build files from dist
 3. Paste them into backend static directory
 
-<br>
+<hr>
 
 ### Author : ``` Vievk Sharma ```
